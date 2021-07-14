@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_084456) do
+ActiveRecord::Schema.define(version: 2021_06_02_092543) do
 
   create_table "cache_entries", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "key"
@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 2020_02_04_084456) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "scope_id", null: false
+    t.boolean "pci_cdi_migration"
+    t.string "pci_record_id"
     t.index ["record_id"], name: "index_watch_list_entries_on_record_id"
     t.index ["scope_id"], name: "index_watch_list_entries_on_scope_id"
     t.index ["watch_list_id"], name: "index_watch_list_entries_on_watch_list_id"

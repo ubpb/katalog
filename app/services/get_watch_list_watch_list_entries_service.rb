@@ -18,7 +18,6 @@ class GetWatchListWatchListEntriesService < Servizio::Service
       _tapped_watch_list_entries
       .group_by(&:scope_id)
       .each do |_scope_id, _watch_list_entries|
-
         records = GetRecordsService.call(
           adapter: scope_by_id(_scope_id).search_engine_adapter.instance,
           ids: _watch_list_entries.map(&:record_id)

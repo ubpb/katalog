@@ -19,12 +19,14 @@
           .col-md-6
             .scope-info
               .image = image_tag "x-primo-central.png", class: "img-responsive"
-              .heading Primo Central
+              .heading Central Discovery Index
               .info
                 p
-                  ' ca. 280 Millionen Datensätze aus
-                  => link_to "bibliographischen Datenbanken und Volltextdatenbanken", "https://www.ub.uni-paderborn.de/recherche/primo/datenquellen-primocentral/", target: "_blank"
-                  ', die i.d.R. nicht im Katalog nachgewiesen sind, z.B. Zeitschriftenaufsätze, E-Books und weitere wissenschaftliche Materialien
+                  ' Millionen Datensätze aus lizenzierten bibliographischen Daten- und Volltextdatenbanken wie Zeitschriftenartikel, E-Book-Kapitel, Einträge aus Nachschlagewerken, Audio- und Video-Dateien und andere Materialien.
+                  /= link_to "https://dbis.uni-regensburg.de/fachliste.php?bib_id=ub_pb&lett=l&colors=&ocolors=", target: "_blank", style: "white-space: nowrap;" do
+                    = fa_icon "external-link"
+                    =< "Fachdatenbanken"
+                  /' .
 
   .col-md-3
     .panel.panel-primary
