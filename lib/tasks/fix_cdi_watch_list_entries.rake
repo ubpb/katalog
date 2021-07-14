@@ -69,6 +69,7 @@ task :fix_cdi_watch_list_entries => :environment do
       elsif result[:success]
         rel.update_all(
           record_id: result[:cdi_record_id],
+          pci_record_id: result[:pci_record_id],
           pci_cdi_migration: true
         )
 

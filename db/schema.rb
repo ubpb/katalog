@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 2021_06_02_092543) do
     t.datetime "updated_at", null: false
     t.string "scope_id", null: false
     t.boolean "pci_cdi_migration"
+    t.string "pci_record_id"
     t.index ["record_id"], name: "index_watch_list_entries_on_record_id"
     t.index ["scope_id"], name: "index_watch_list_entries_on_scope_id"
     t.index ["watch_list_id"], name: "index_watch_list_entries_on_watch_list_id"
